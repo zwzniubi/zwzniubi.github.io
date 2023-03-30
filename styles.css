@@ -1,0 +1,130 @@
+/* Slide styles */
+.slide {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, indigo, purple, indigo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .slide h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+  }
+  
+  .slide p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  
+  .slide img {
+    max-width: 100%;
+    margin-bottom: 1.5em;
+  }
+  
+  .slide ul {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  
+  .slide li {
+    margin-bottom: 0.5em;
+  }
+  
+  /* Button styles */
+  .button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1em 2em;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #16a085;
+  }
+  
+  /* Navigation styles */
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+  
+  .nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin-right: 1em;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 3px;
+  }
+  
+  .nav a:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Media queries */
+  @media screen and (min-width: 768px) {
+    /* Two-column layout */
+    .slide {
+      flex-direction: row;
+    }
+  
+    .slide img {
+      margin-bottom: 0;
+      margin-right: 2em;
+    }
+  
+    .slide p,
+    .slide ul {
+      flex: 1;
+    }
+  
+    /* Navigation on desktop */
+    .nav {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    /* Navigation on mobile */
+    .nav {
+      display: flex;
+    }
+  
+    .nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1em;
+    }
+  
+    .nav li {
+      margin-bottom: 0.5em;
+    }
+  }
