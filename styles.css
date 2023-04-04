@@ -2,7 +2,7 @@
 .slide {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(to bottom, indigo, purple, indigo);
+    background: linear-gradient(to bottom, #5C6BC0, #48d1cc, #5C6BC0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,12 +32,29 @@
   .slide li {
     margin-bottom: 0.5em;
   }
+  .slide sm {
+    margin-bottom: 0.5em;
+  }
   
   /* Button styles */
   .button {
     position: absolute;
-    bottom: 10%;
+    bottom: 0%;
     left: 50%;
+    transform: translateX(-50%);
+    padding: 1em 2em;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+  .button1 {
+    position: absolute;
+    bottom: 0%;
+    left: 75%;
     transform: translateX(-50%);
     padding: 1em 2em;
     background-color: #1abc9c;
@@ -93,7 +110,7 @@
   @media screen and (min-width: 768px) {
     /* Two-column layout */
     .slide {
-      flex-direction: row;
+      flex-direction: column;
     }
   
     .slide img {
@@ -127,4 +144,24 @@
     .nav li {
       margin-bottom: 0.5em;
     }
+
+    .pics {
+      display: flex;
+      flex-direction: space-between;
+      height: 400px;
+      align-items: center;
+    }
+    .pics img {
+      margin: 10px;
+      border: 3px solid #000;
+      box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+      max-width: 25vw;
+    }
+    
+    .picsinfo {
+      background: rgb(221, 170, 215);
+      text-align: center;
+      display: block;
+    }
+  
   }
