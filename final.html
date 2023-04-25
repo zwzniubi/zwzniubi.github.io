@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <title>Pomodoro Clock</title>
+</head>
+<body class="bg-gradient-to-r via-indigo-400 from-blue-300 to-blue-300 min-h-screen">
+    <div class="container mx-auto px-4 py-10">
+        <h1 class="text-white text-4xl font-bold mb-10 text-center">Pomodoro Clock</h1>
+        <div class="flex flex-col items-center">
+            <div id="timer" class="text-white text-6xl font-bold mb-8">25:00</div>
+            <div class="flex space-x-4">
+                <button id="start" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Start</button>
+                <button id="stop" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Stop</button>
+                <button id="reset" class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded">Reset</button>
+            </div>
+        </div>
+        <div class="mt-10 flex">
+            <div class="w-1/2">
+                <h2 class="text-white text-2xl font-bold mb-4">Music Player</h2>
+                <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;border-radius: 10px;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/cn/album/humble-swag-gt-mixtape/1633016717"></iframe>
+            </div>
+            <div class="w-1/2 pl-4">
+                <h2 class="text-white text-2xl font-bold mb-4">To-Do List</h2>
+                <div class="bg-white p-4 rounded shadow">
+                    <form id="todo-form" class="mb-4">
+                        <input id="todo-input" type="text" class="w-full p-2 text-black" placeholder="Add a task" autocomplete="off">
+                    </form>
+                    <ul id="todo-list" class="list-none"></ul>
+                    <button id="clear-tasks" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4">Clear Tasks</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="final.js"></script>
+</body>
+</html>
