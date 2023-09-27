@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miami Focus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e9f7f9;
+}
+
+header {
+    background-color: #0086b3;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#main {
+    padding: 20px;
+    text-align: center;
+}
+
+#main img {
+    max-width: 100%;
+    height: auto;
+}
+
+.attraction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.attraction img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+footer {
+    background-color: #0086b3;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+    <header>
+        <h1>Welcome to Miami</h1>
+        <nav>
+            <a href="#main">Home</a>
+            <a href="#attractions">Attractions</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <section id="main">
+        <img src="miami-beach.jpg" alt="Miami Beach">
+        <p>Miami, officially the City of Miami, is the seat of Miami-Dade County, and the cultural, economic and financial center of South Florida in the United States.</p>
+    </section>
+
+    <section id="attractions">
+        <h2>Popular Attractions</h2>
+        <!-- Example attraction -->
+        <div class="attraction">
+            <img src="attraction1.jpg" alt="Attraction 1">
+            <p>Description of attraction 1</p>
+        </div>
+        <!-- Add more attractions as needed -->
+    </section>
+
+    <footer id="contact">
+        <p>Contact us at: miami@example.com</p>
+    </footer>
+</body>
+</html>
