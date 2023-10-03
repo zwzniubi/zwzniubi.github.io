@@ -1,83 +1,102 @@
-body {
+body, html {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom right, #0099ff, #6600cc); /* Gradient Background */
-    color: white; /* Default text color set to white for better visibility on gradient */
+    background: linear-gradient(to bottom right, #0099ff, #6600cc);
+    color: white;
+    height: 100%;
 }
 
 .container {
-    width: 80%;
-    margin: 50px auto;
+    max-width: auto;
+    margin: 0 auto;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: rgba(83, 95, 255, 0.8);
     border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
-nav, footer {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2, nav ul {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav a {
     color: white;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-nav h2, footer p {
+nav a:hover {
+    color: #ffcc00;
+}
+
+h1, h2 {
     text-align: center;
-    margin: 0;
-    padding: 15px 0;
-    transition: background 0.3s ease; /* Transition for hover */
-}
-
-nav h2:hover, footer p:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
-}
-
-h1 {
-    text-align: center;
-    color: #333;
 }
 
 .image-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    perspective: 1px; /* Needed for parallax */
-    overflow-x: hidden; /* No horizontal scrolling */
-    overflow-y: auto; /* Vertical scrolling */
-    height: 70vh; /* Control the height */
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 70vh;
 }
 
 .image-box {
     flex: 1;
     margin: 10px;
     text-align: center;
-    transform-origin: 0 0; /* Top left */
-    transform: translateZ(-1px) scale(2); /* Parallax */
+    transition: transform 0.3s;
+}
+
+.image-box:hover {
+    transform: translateY(-10px);
 }
 
 .image-box img {
     max-width: 100%;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.image-box img:hover {
-    transform: scale(1.05);
 }
 
 .image-box p {
     margin-top: 10px;
-    font-size: 18px;
-    color: #555;
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    background-color: rgba(0, 0, 0, 0.7);
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease; /* Transition effect */
 }
 
-.image-box p:hover {
-    background-color: rgba(255, 255, 255, 0.9); /* Hover effect */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+footer p {
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
 }
 
 @media (max-width: 768px) {
